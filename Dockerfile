@@ -18,6 +18,7 @@ FROM base AS release
 COPY --from=install /temp/prod/node_modules node_modules
 COPY --from=web /temp/web/dist web/dist
 COPY ./src ./src
+COPY ./prompt.txt ./prompt.txt
 COPY ./package.json .
 
 ENV NODE_ENV=production
