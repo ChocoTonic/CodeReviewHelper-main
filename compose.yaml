@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: code-review-helper
+    ports:
+      - "4040:4040"
+    environment:
+      - PORT=4040
+      - LOG_LEVEL=debug
+      - ANTHROPIC_API_KEY=your_api_key
